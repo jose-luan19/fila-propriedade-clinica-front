@@ -1,0 +1,37 @@
+<div class="card add-cliente">
+  <h5 class="card-header">Adicionar cliente na fila</h5>
+  <div class="card-body">
+    <form class="border border-light p-5" [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()">
+      <!-- Level -->
+      <div class="form-group">
+        <label class="mb-2 text-left" for="descricaoPrioridade">Tipo de
+          atendimento</label>
+        <select formControlName="descricaoPrioridade" class="form-select
+          browser-default custom-select mb-4">
+          <option value disabled>Escola uma opção</option>
+          <option>Gestantes, Idosos e Pessoas com deficiência, prioridade máxima</option>
+          <option>Encaminhados pelo médico, prioridade média</option>
+          <option>Casos gerais, nenhuma prioridade</option>
+        </select>
+      </div>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label class="mb-2 text-left" for="nome">Nome</label>
+        <input type="text" formControlName="nome" id="defaultContactFormName"
+          mdbInput
+          class="form-control mb-4" placeholder="Nome" required>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button mdbBtn color="info" outline="true" block="true" class="btn
+          btn-primary"
+          mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Incluir
+          na fila</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
