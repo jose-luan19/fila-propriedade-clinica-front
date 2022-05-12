@@ -31,7 +31,7 @@ export class ConnectionService {
   }
 
    // deleta um carro
-   deleteCar(cliente: Cliente) {
+   deleteCliente(cliente: Cliente) {
     return this.http.delete<Cliente>(this.url + '/' + cliente.id, this.httpOptions)
       .pipe(
         retry(1),

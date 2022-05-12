@@ -25,8 +25,8 @@ export class ListarClientesComponent implements OnInit {
     });
   }
 
-  deleteCar(cliente: Cliente) {
-    this.connectionService.deleteCar(cliente).subscribe(() => {
+  deleteCliente(cliente: Cliente) {
+    this.connectionService.deleteCliente(cliente).subscribe(() => {
       this.getClientes();
     });
   }
